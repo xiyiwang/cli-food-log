@@ -7,6 +7,7 @@ A CLI application tat puts your health first
 - Start the JSON Server by running `npx json-server --watch db.json --port 3001` in the command line
 - In a seperate terminal tab, run the index.js file
 - As the cli is running, use `log` to log food items, or use `list vegan foods` to view the list of vegan food items in the database
+- Use `exit` to exit the cli
 
 ## Modules Used
 
