@@ -2,16 +2,11 @@
 
 A CLI application tat puts your health first
 
-## Project Demo
+## How to use this cli
 
-- Run this app from the command line
-- Prompt the user asking what they ate, and how much
-- Show the user how many calories are in that food
-- Setup database
-- Allows user to enter dietary requests
-- Use follow-up questions
-- Specify how many servings were eaten
-- Create iterator to execute functions
+- Start the JSON Server by running `npx json-server --watch db.json --port 3001` in the command line
+- In a seperate terminal tab, run the index.js file
+- As the cli is running, use `log` to log food items, or use `list vegan foods` to view the list of vegan food items in the database
 
 ## Modules Used
 
