@@ -67,7 +67,7 @@ readline.on('line', async line => {
                             },
                             throw (error) {
                                 console,log(error);
-                                return { value: undefined, done: true }
+                                return { value: undefined, done: true };
                             }
                         }
                     },
@@ -87,7 +87,7 @@ readline.on('line', async line => {
                     );
                 }
 
-                function displayCalories(servingSize, food) {
+                async function displayCalories(servingSize, food) {
                     const calories = food.calories;
                     console.log(
                         `${
@@ -96,6 +96,29 @@ readline.on('line', async line => {
                             calories * parseInt(servingSize, 10),
                         ).toFixed()} calories. `,
                     );
+                    const { data } = await axios.get(`http://localhost:3001/users/1`);
+                    const usersLog = data.log || [];
+                    const putBody = {
+                        ...data, 
+                        log: [
+                            ...usersLog,
+                            {
+                                [Date.now()]: {
+                                    food: food.name,
+                                    servingSize,
+                                    calories: Number.parseFloat(
+                                        calories * parseInt(servingSize, 10),
+                                    )
+                                }
+                            }
+                        ]
+                    }
+                    await axios.put(`http://localhost:3001/users/1`, putBody, {
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+
                     actionIt.next();
                     readline.prompt();
                 }
