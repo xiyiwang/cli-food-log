@@ -9,6 +9,9 @@ A CLI application tat puts your health first
 - Show the user how many calories are in that food
 - Setup database
 - Allows user to enter dietary requests
+- Use follow-up questions
+- Specify how many servings were eaten
+- Create iterator to execute functions
 
 ## Modules Used
 
