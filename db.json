@@ -4,6 +4,7 @@
             "id": 1,
             "name": "apple",
             "calories": 88,
+            "dietary_preferences": ["vegan"],
             "serving_size": 6,
             "serving_size_units": "oz"
         },
@@ -11,6 +12,7 @@
             "id": 2,
             "name": "chicken breast",
             "calories": 125,
+            "dietary_preferences": ["keto"],
             "serving_size": 3,
             "serving_size_units": "oz"
         },
@@ -18,6 +20,7 @@
             "id": 3,
             "name": "whole milk",
             "calories": 240,
+            "dietary_preferences": ["keto"],
             "serving_size": 8,
             "serving_size_units": "oz"
         }
