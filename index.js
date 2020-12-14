@@ -137,5 +137,8 @@ readline.on('line', async line => {
                     readline.prompt();
                 })
             }
+            break;
+        case 'exit':
+            readline.close();
     }
 })
