@@ -1,6 +1,6 @@
 # Project: Console Log-My-Food
 
-A CLI application tat puts your health first
+A CLI application that puts your health first
 
 ## How to use this cli
 
